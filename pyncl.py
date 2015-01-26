@@ -24,8 +24,6 @@ class Func:
 
     def wrf_user_getvar(wrfout_path, var):
         file_path = 'tmp.ncl'
-        # wrfout_path = 'wrfout.nc'
-        # var = 'slp'
         ncl_code = '''
 load "$NCARG_ROOT/lib/ncarg/nclscripts/wrf/WRFUserARW.ncl"
 
@@ -48,6 +46,5 @@ write_matrix(var, fmt, opt)
 
 end
     '''
-
         NCL.create(file_path, ncl_code)
         NCL.run(file_path)

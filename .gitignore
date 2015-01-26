@@ -3,3 +3,8 @@
 *.nc
 
 *.pyc
+
+build/*
+
+pyncl.egg-info/*
+dist/*
